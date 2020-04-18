@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!--Agregando este Link de Abajo agregamos a Bootstrap 4 la Librería de FontAwesome, que sirve para Usar/Poner Íconos.-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Bootstrap 4 Course Class 12 - Navigation Bar of a Web Page</title>
+        <!--.-->
+</head>
+<body>
+
+<h1 class="h1">Navigation Bar of a Web Page with Bootstrap 4</h1>
+<!--La Barra de Navegación es el Componante más Importante de Toda Aplicación Web porque es la manera en que el Usuario va circular entre las distintas rutas de Nuestra Página Web. En esta Clase vamos a aprender a
+Estilizarlas con Bootstrap 4.-->
+
+<hr class="bg-dark">
+
+<h1>Standard Bootstrap 4 Navbar:_</h1>
+<!--La Barra de Navegación(Navigation Bar, Navbar) Por Defecto en Bootstrap 4 tiene la Clase .navbar , que le dá el Estilo por defecto de Bootstrap 4 y Diseño Adaptativo(Responsive Design) y 
+la Clase .navbar-expand-xl|lg|md|sm que pone la Barra de Navegación(Navigation Bar, Navbar) de forma Vertical en el Tamaño de Pantalla que se le Especifique(xl|lg|md|sm).-->
+    <nav class="navbar navbar-expand-md bg-light">
+<!--Para agregar Links a la Barra de Navegación(Navigation Bar, Navbar), usamos un Elemento <ul> con la class="navbar-nav", después le agregamos Elementos <li> con la class="nav-item" y dentro de cada uno de 
+ellos agregamos un Elemento <a> con la class="nav-link".-->
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+<hr class="bg-dark">
+
+<h1>Our Web App Navbar with the Brand(Of The Company) as a Title:_</h1>
+<!--Para Agregar en forma de Título y Destacado el Nombre de La Empresa/Marca de la Página Web Dentro del Elemento <nav> justo antes del Elemento <ul> Creamos un Elemento <a> con la class="navbar-brand" 
+(Y cuyo Link Generalmente lleva a la Home o Página Principal) y Le Escribimos el Nombre de La Empresa/Marca.-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="#" class="navbar-brand">
+            My Web App
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+<hr class="bg-dark">
+
+<h1>Navbar with Brand On The Right Side:_</h1>
+<!--Las Navbar y los Elemntos de HTML y CSS en general siempre aparecen a la Izquierda por Defecto, pero si nosotros queremos la navbar del Lado Derecho le aplicamos al Elemento <ul> la class="ml-auto"
+    (MarginLeft-Automatic) que hace sin importar el Tamano de la Pantalla la Navbar se mantenga siempre a la Derecha.-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="#" class="navbar-brand">
+            My Web App
+        </a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+<hr class="bg-dark">
+
+<h1>Navbar on the Right Side which moves under the Brand Title if the Page Gets Narrower:_</h1>
+<!--Igual que el Ejemplo Anterior pero la Navbar en vez de Mantenerse siempre a la Derecha sin importar el Tamaño de la Pantalla, se Mueve debajo del Nombre de La Empresa/Marca cuando la Ventana/Pantalla de la
+Página Web se hace más angosta. Para eso dentro del Elemento <navbar> debajo del Elemento <a> que contiene el Nombre de La Empresa/Marca, creamos un Elemento <div> con la class="navbar-collapse" y DENTRO DE EL
+creamos el Elemento <ul> Correspondiente a la Navbar.-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="#" class="navbar-brand">
+            My Web App
+        </a>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<hr class="bg-dark">
+
+<h1>Dropdown Navbar from a Button if the Page Gets Narrower:_</h1>
+<!--Igual que el Ejemplo Anterior pero la Navbar a parte de Moverse debajo del Nombre de La Empresa/Marca cuando la Ventana/Pantalla de la Página Web se hace más Angosta, también en ese momento aparece un Botón que
+permite Desplegar y Retraer los Links de la Navbar a Voluntad. Esto se hace creando Dentro del Elemento <nav>, debajo del Elemento <a> que contiene el Nombre de La Empresa/Marca y arriba del Elemento
+ <div class="navbar-collapse"> un Elemento <button> con las Siguientes características:_ <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#(ID DEL <div class="navbar-collapse">)">
+ , y dentro de él creamos un Elemento <span> con la class="navbar-toggler-icon", y luego al Elemento <div class="navbar-collapse"> le agramos la class="collapse" y un Nombre con en Atributo ID (Ej:_ id="firstNavbar") con el cual vamos
+a rellenar el atributo "data-target="***"" de Nuestro Button, antecediendo al Nombre del ID con un "#"(Numeral, Hashtag).-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="#" class="navbar-brand">
+            My Web App
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#firstNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>   
+        <div class="collapse navbar-collapse" id="firstNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<hr class="bg-dark">
+
+<h1>A Search Bar for Our Navbar:_</h1>
+<!--Igual que el Ejemplo Anterior pero le agregamos a la Navbar una Barra de Búsqueda(Search Bar). Para hacerlo dentro del Elemento <div class="collapse navbar-collapse" id="secondNavbar"> debajo del Elemento <ul>
+creamos un Elemento <form>(Formulario) con la Bootstrap 4 class="form-inline"(Formulario en Línea/En el Mismo Renglón) para Estilizarlo, dentro del cual creamos un Elemento <input>(Entrada, de Datos se Refiere) 
+con el atributo "type="text""(Porque es Un Formulario(form) Cuya Entrada de Datos(input) es de Tipo Texto(type="text")) , la class="form-control" para Estilizarlo y el atributo placeholder="***" que lo rellenamos
+con lo que queramos que diga Por Defecto el espacio de Escritura de la Barra de texto si el Usuario no le Ingresa ningún Texto; y debajo del Elemento <input> creamos un Elemento <button type="button"> y le
+escribimos "Search", "Buscar" o lo que corresponda.-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="#" class="navbar-brand">
+            My Web App
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#secondNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>   
+        <div class="collapse navbar-collapse" id="secondNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+            <form class="form-inline">
+                <input type="text" class="form-control" placeholder="Search something...">
+                <button type="button" class="btn btn-dark">Search</button>
+            </form>
+        </div>
+    </nav>
+
+<hr class="bg-dark">
+
+<h1>An Option with More in Our Navbar:_</h1>
+<!--Igual que el Ejemplo Anterior pero le agregamos pero de las Opciones o Links dentro de la Navbar agregamos otro Link/Sección/Opción con un Menú Desplegable que Muestra más Opciones. Para añadir esto,
+dentro de nuestro Elemento <ul> agregamos donde queramos otro Elemento <li>  PERO con las class="nav-item dropdown"(Esta Última es la Novedad), al Elemento <a class="nav-link" href="#"> que le creamos adentro
+Por Defecto, le agregamos la a class="dropdown-toggle" y el atributo data-toggle="dropdown" y le ponemos el nombre que corresponda. Debajo de nuestro nuevo  Elemento <a class="nav-link dropdown-toggle"... 
+...data-toggle="dropdown" href="#"> creamos un Elemento <div> con la class="dropdown-menu"(Menú Desplegable) y Dentro de Él ponemos todas las SubOpciones que queramos en forma de Elementos <a> con la
+    class="dropdown-item".-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a href="#" class="navbar-brand">
+            My Web App
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#secondNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>   
+        <div class="collapse navbar-collapse" id="secondNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">More Options</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Option 1</a>
+                        <a href="#" class="dropdown-item">Option 2</a>
+                        <a href="#" class="dropdown-item">Option 3</a>
+                        <a href="#" class="dropdown-item">Option 4</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <input type="text" class="form-control" placeholder="Search something...">
+                <button type="button" class="btn btn-dark">Search</button>
+            </form>
+        </div>
+    </nav>
+
+<hr class="bg-dark">
+
+
+
+
+
+
+
+
+
+
+
+<!-- Si utilizamos componentes de Bootstrap que requieran Javascript agregar estos tres archivos -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
